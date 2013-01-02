@@ -8,7 +8,9 @@ Cuba.define do
 
     open(octocats_url) do |feed|
       xml = Nokogiri::XML(feed.read)
-      random_cat = xml.css("img").map { |img| img["src"] }.sample
+      octocats = xml.css("entry content div a:first-child img").map { |img| img["src"] }
+      random_cat = octocats.sample
+
       res.redirect random_cat
     end
   end
