@@ -1,0 +1,21 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    cuba (3.1.0)
+      rack
+    kgio (2.7.4)
+    nokogiri (1.5.6)
+    rack (1.4.1)
+    raindrops (0.10.0)
+    unicorn (4.5.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba
+  nokogiri
+  unicorn
